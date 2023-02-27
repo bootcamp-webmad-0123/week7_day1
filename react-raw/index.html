@@ -1,0 +1,57 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add React to a Website</title>
+    <meta charset="UTF-8" />
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <!-- <script>
+        // FULL RAW REACT (NO BABEL NEEDED, NO JSX)
+
+        var whatTheFuck = React.createElement(
+            "h1",
+            null,
+            "Estamos en nuestra primra clase de React"
+        )
+
+        var title = React.createElement(
+            "header",
+            { className: 'RedText' },
+            whatTheFuck,
+            React.createElement("hr", null)
+        )
+
+        ReactDOM.render(
+            title,
+            document.getElementById('root')
+        )
+    </script> -->
+
+
+    <script type="text/babel">
+
+        const whatTheFuck = <h1>Estamos en nuestra primra clase de React</h1>
+        const title = <header>{whatTheFuck} <hr /></header>
+
+        ReactDOM.render(
+            title,
+            document.getElementById('root')
+        )
+
+    </script>
+
+</body>
+
+</html>
